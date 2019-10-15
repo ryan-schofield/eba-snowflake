@@ -1,8 +1,8 @@
 {{ config(materialized='ephemeral') }}
 
-SELECT CAST(DATEADD(DAY, RIGHT(LEFT(sclk, 8),3)::INTEGER, CAST(LEFT(sclk, 4)||'-01-01' AS TIMESTAMP))::DATE::TEXT||'T'||RIGHT(sclk, 12) AS TIMESTAMP) AS sclk
+SELECT {{nasa_date('sclk')}} AS sclk
     ,alt_t
-    ,DATEADD(DAY, RIGHT(LEFT(sclk, 8),3)::INTEGER, CAST(LEFT(sclk, 4)||'-01-01' AS TIMESTAMP))::DATE AS sclk_date
+    ,{{nasa_date('sclk')}}::DATE AS sclk_date
     ,target
     ,source
     ,mass_table
