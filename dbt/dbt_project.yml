@@ -1,0 +1,22 @@
+name: 'dw'
+version: '1.0'
+
+profile: 'zero-to-snowflake'
+
+source-paths: ["models"]
+macro-paths: ["macros"]
+
+models:
+  dw:
+    enabled: true
+    materialized: table
+    staging:
+      materialized: table
+      schema: staging 
+    raw:
+      materialized: ephemeral 
+
+quoting:
+  database: false
+  identifier: false
+  schema: false
