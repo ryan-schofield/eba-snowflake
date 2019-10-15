@@ -1,0 +1,83 @@
+name,formula,molecular_weight,peak,sensitivity
+Water,H2O,18,18,4.82E-04
+Cyanogen,C2N2,52,52,6.03E-04
+Carbon Monoxide,CO,28,28,6.03E-04
+Carbon Monoxide,CO(iso),28,29,6.03E-04
+Propyne,C3H4,40,40,6.10E-04
+Propane,C3H8,44,44,6.10E-04
+Propiolonitrile,C3HN,51,51,6.10E-04
+Butadiyne,C4H2,50,50,6.10E-04
+Benzene,C6H6,78,78,6.10E-04
+Hydrogen cyanide,HCN,27,27,6.10E-04
+Molecular Nitrogen,N2,28,28,6.29E-04
+Molecular Nitrogen,N2,28,28,2.06E-04
+Molecular Nitrogen,N2,28,28,3.09E-04
+Molecular Nitrogen,N2,28,28,8.80E-05
+Molecular Nitrogen (isotope),N2(ISO),28,29,6.29E-04
+Molecular Nitrogen (isotope),N2(ISO),28,29,2.06E-04
+Molecular Nitrogen (isotope),N2(ISO),28,29,3.09E-04
+Molecular Nitrogen (isotope),N2(ISO),28,29,8.80E-05
+Argon,Ar,40,40,7.66E-04
+Argon,Ar,40,40,3.59E-04
+Argon,Ar,40,40,3.46E-04
+Argon,Ar,40,40,1.43E-04
+Argon,Ar(iso),36,36,7.66E-04
+Argon,Ar(iso),36,36,3.59E-04
+Argon,Ar(iso),36,36,3.46E-04
+Argon,Ar(iso),36,36,1.43E-04
+Methane,CH4,16,16,7.47E-04
+Methane,CH4,16,16,4.07E-04
+Methane,CH4,16,16,3.20E-04
+Methane,CH4,16,16,1.75E-04
+Methane (isotope),CH4(ISO),17,17,7.47E-04
+Methane (isotope),CH4(ISO),17,17,4.07E-04
+Methane (isotope),CH4(ISO),17,17,3.20E-04
+Methane (isotope),CH4(ISO),17,17,1.75E-04
+Helium,He,4,4,1.09E-04
+Helium,He,4,4,8.40E-06
+Helium,He,4,4,5.26E-05
+Helium,He,4,4,9.88E-07
+Molecular Hydrogen,H2,2,2,3.65E-04
+Molecular Hydrogen,H2,2,2,1.72E-04
+Molecular Hydrogen,H2,2,2,1.82E-04
+Molecular Hydrogen,H2,2,2,8.88E-05
+Krypton,Kr,84,84,4.28E-04
+Krypton,Kr,84,84,1.93E-04
+Krypton,Kr,84,84,2.14E-04
+Krypton,Kr,84,84,9.45E-05
+Acetylene,C2H2,26,26,7.95E-04
+Acetylene,C2H2,26,26,5.04E-04
+Acetylene,C2H2,26,26,3.72E-04
+Acetylene,C2H2,26,26,2.36E-04
+Ethylene,C2H4,28,28,7.01E-04
+Ethylene,C2H4,28,28,4.22E-04
+Ethylene,C2H4,28,28,3.05E-04
+Ethylene,C2H4,28,28,2.07E-04
+Benzene,C6H6,78,78,9.13E-04
+Benzene,C6H6,78,78,6.13E-04
+Benzene,C6H6,78,78,4.00E-04
+Benzene,C6H6,78,78,2.97E-04
+Carbon Dioxide,CO2,44,44,7.38E-04
+Carbon Dioxide,CO2,44,44,2.55E-04
+Carbon Dioxide,CO2,44,44,1.67E-04
+Carbon Dioxide,CO2,44,44,5.59E-05
+Carbon Monoxide,CO,28,28,6.03E-04
+Carbon Monoxide,CO,28,28,2.32E-04
+Carbon Monoxide,CO,28,28,2.14E-04
+Carbon Monoxide,CO,28,28,7.08E-05
+Ethane,C2H6,30,28,7.87E-04
+Ethane,C2H6,30,28,4.41E-04
+Ethane,C2H6,30,28,3.37E-04
+Ethane,C2H6,30,28,2.08E-04
+Neon,Neo,22,20,1.27E-04
+Neon,Neo,22,20,8.81E-06
+Neon,Neo,22,20,9.44E-05
+Neon,Neo,22,20,5.58E-06
+Molecular Oxygen,O2,32,32,6.05E-04
+Molecular Oxygen,O2,32,32,1.37E-04
+Molecular Oxygen,O2,32,32,9.24E-05
+Molecular Oxygen,O2,32,32,2.29E-05
+Propane,C3H8,44,29,6.55E-04
+Propane,C3H8,44,29,4.10E-04
+Propane,C3H8,44,29,3.06E-04
+Propane,C3H8,44,29,2.08E-04
