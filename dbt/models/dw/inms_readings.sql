@@ -5,7 +5,7 @@
 }}
 
 SELECT inms_readings_seq.nextval AS id
-    ,sclk AS time_stamp
+    ,{{nasa_date('sclk')}} AS time_stamp
     ,source
     ,mass_table
     ,alt_t::NUMBER(9, 2) AS altitude
