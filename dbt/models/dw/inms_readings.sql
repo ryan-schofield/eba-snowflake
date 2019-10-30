@@ -14,5 +14,5 @@ SELECT inms_readings_seq.nextval AS id
     ,{{pythag('sc_vel_t_scx::NUMERIC', 'sc_vel_t_scy::NUMERIC', 'sc_vel_t_scz::NUMERIC')}} AS relative_speed
     ,c1counts::INTEGER AS high_counts
     ,c2counts::INTEGER AS low_counts
-FROM {{ref('inms')}}
+FROM {{source('raw','inms')}}
 ORDER BY time_stamp

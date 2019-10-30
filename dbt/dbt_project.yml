@@ -13,8 +13,6 @@ models:
     staging:
       materialized: table
       schema: staging 
-    raw:
-      materialized: ephemeral 
 
 quoting:
   database: false

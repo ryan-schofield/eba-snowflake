@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    database: demo_db
+    schema: raw
+    description: "extracted Cassini data"
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+      
+    tables:
+      - name: chem_data
+      - name: inms
+      - name: jpl_flybys
