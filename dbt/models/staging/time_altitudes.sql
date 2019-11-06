@@ -5,3 +5,4 @@ SELECT {{nasa_date('sclk')}} AS time_stamp
 FROM {{source('raw','inms')}} x
 WHERE alt_t IS NOT NULL
     AND UPPER(target) = 'ENCELADUS'
+    
