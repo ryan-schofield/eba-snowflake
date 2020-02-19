@@ -64,7 +64,7 @@ SELECT *
 FROM RAW.JPL_FLYBYS;
 
 -- select from json
-SELECT JSON_DATA ['date']
+SELECT JSON_DATA['date']
 FROM RAW.JPL_FLYBYS;
 
 -- select from json and cast types
@@ -90,9 +90,9 @@ CREATE OR REPLACE STAGE ENCELADUS_DATA URL='s3://eide-bailly-zero-to-snowflake-d
 
 -- create table for master_plan.txt (pipe delimited, quote text, mixed types with json)
 CREATE OR REPLACE TABLE RAW.MASTER_PLAN (
-	START_TIME_UTC VARCHAR(16777216),
-	DURATION VARCHAR(16777216),
-	DATE VARCHAR(16777216),
+	START_TIME_UTC TEXT,
+	DURATION TEXT,
+	DATE TEXT,
 	JSON_DATA VARIANT
 );
 
@@ -106,7 +106,7 @@ COPY INTO RAW.MASTER_PLAN
     FROM s3://eide-bailly-zero-to-snowflake-demo/master_plan.txt
     FILE_FORMAT = (FORMAT_NAME = 'MASTER_PLAN_FORMAT');
 
--- create table for inms.csv.gz (comprressed csv)
+-- create table for inms.csv.gz (compressed csv)
 CREATE OR REPLACE TABLE RAW.INMS (
 	sclk TEXT
 	,target TEXT
@@ -149,6 +149,20 @@ CREATE OR REPLACE TABLE RAW.CDA (
 -- copy cda.csv
 COPY INTO RAW.CDA
     FROM s3://eide-bailly-zero-to-snowflake-demo/cda.csv
+    FILE_FORMAT = (TYPE = CSV SKIP_HEADER = 1);
+
+-- create table for chem_data.csv
+CREATE OR REPLACE TABLE RAW.CHEM_DATA (
+	NAME TEXT
+	,FORMULA TEXT
+	,MOLECULAR_WEIGHT TEXT
+	,PEAK TEXT
+	,SENSITIVITY TEXT
+	);
+
+-- copy chem_data.csv
+COPY INTO RAW.CHEM_DATA
+    FROM s3://eide-bailly-zero-to-snowflake-demo/chem_data.csv
     FILE_FORMAT = (TYPE = CSV SKIP_HEADER = 1);
 
 -- add staging schema
