@@ -14,7 +14,6 @@ SELECT f.flyby_id
 			THEN true
 		ELSE false
 		END AS targeted
-	--,tsrange(mt.window_start, mt.window_end, '[]') AS analysis_window
 FROM {{ref('flyby_cols')}} f
 INNER JOIN {{ref('min_times')}} mt
 	ON date_part(YEAR, f.flyby_date) = mt.year

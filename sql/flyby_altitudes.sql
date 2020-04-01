@@ -9,19 +9,19 @@ SELECT SPLIT(REPLACE(SCLK, 'T', '-'), '-') AS SPLIT_VALS
 FROM RAW.INMS LIMIT 10;
 
 -- select individual values from the array
-SELECT SPLIT(REPLACE(SCLK, 'T', '-'), '-') [0]::INT AS REC_YEAR
-    ,SPLIT(REPLACE(SCLK, 'T', '-'), '-') [1]::INT AS REC_DAY
-    ,SPLIT(REPLACE(SCLK, 'T', '-'), '-') [2]::TIME AS REC_TIME
+SELECT SPLIT(REPLACE(SCLK, 'T', '-'), '-')[0]::INT AS REC_YEAR
+    ,SPLIT(REPLACE(SCLK, 'T', '-'), '-')[1]::INT AS REC_DAY
+    ,SPLIT(REPLACE(SCLK, 'T', '-'), '-')[2]::TIME AS REC_TIME
 FROM RAW.INMS LIMIT 10;
 
 -- convert string values to date with DATE_FROM_PARTS and convert to timestamp
 SELECT (
     DATE_FROM_PARTS(
-        SPLIT(REPLACE(SCLK, 'T', '-'), '-') [0]::INT, 1
-        ,SPLIT(REPLACE(SCLK, 'T', '-'), '-') [1]::INT
+        SPLIT(REPLACE(SCLK, 'T', '-'), '-')[0]::INT, 1
+        ,SPLIT(REPLACE(SCLK, 'T', '-'), '-')[1]::INT
         )::STRING 
     || ' ' 
-    || SPLIT(REPLACE(SCLK, 'T', '-'), '-') [2]::STRING
+    || SPLIT(REPLACE(SCLK, 'T', '-'), '-')[2]::STRING
     )::DATETIME
 FROM RAW.INMS LIMIT 10;
 
@@ -32,11 +32,11 @@ AS
 $$
     (
         DATE_FROM_PARTS(
-            SPLIT(REPLACE(NASA_STR, 'T', '-'), '-') [0]::INT, 1
-            ,SPLIT(REPLACE(NASA_STR, 'T', '-'), '-') [1]::INT
+            SPLIT(REPLACE(NASA_STR, 'T', '-'), '-')[0]::INT, 1
+            ,SPLIT(REPLACE(NASA_STR, 'T', '-'), '-')[1]::INT
             )::STRING 
         || ' ' 
-        || SPLIT(REPLACE(NASA_STR, 'T', '-'), '-') [2]::STRING
+        || SPLIT(REPLACE(NASA_STR, 'T', '-'), '-')[2]::STRING
     )::DATETIME
 $$;
 
@@ -69,3 +69,11 @@ GROUP BY 1
     ,2
 ORDER BY 1
     ,2;
+
+-- add UDF for Pythagoras' Theorem
+CREATE OR REPLACE FUNCTION PYTHAG (X FLOAT, Y FLOAT, Z FLOAT)
+RETURNS NUMBER(10, 2)
+AS
+$$
+    SQRT((X * X) + (Y * Y) + (Z * Z))::NUMBER(10, 2)
+$$;
