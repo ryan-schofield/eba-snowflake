@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: raw
-    database: demo_db
-    schema: raw
+  - name: datalake
+    database: dbt
+    schema: datalake
     description: "extracted Cassini data"
 
     quoting:

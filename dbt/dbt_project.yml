@@ -1,7 +1,7 @@
 name: 'dw'
 version: '1.0'
 
-profile: 'zero-to-snowflake'
+profile: 'Snowflake'
 
 source-paths: ["models"]
 macro-paths: ["macros"]

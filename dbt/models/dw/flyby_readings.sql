@@ -14,7 +14,7 @@ FROM {{ref('flybys')}} fb
 INNER JOIN {{ref('inms_readings')}} inms
 	ON inms.time_stamp >= fb.window_start
 		AND inms.time_stamp <= fb.window_end
-INNER JOIN {{source('raw','chem_data')}} cd
+INNER JOIN {{source('datalake','chem_data')}} cd
 	ON cd.peak = inms.mass_per_charge
 WHERE fb.targeted = TRUE
 GROUP BY fb.flyby_id
